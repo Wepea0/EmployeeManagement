@@ -186,12 +186,14 @@ public class ProjectTree{
       }
     else {
       for (Employee teamMember: team.getTeamMembers()){
+        // MyNode currentNode = new MyNode(teamMember.getEmployeeName() + " | Active Task -777 " + teamMember.getCurrTask(), parent);
+        // parent.addChild(currentNode);
         if(teamMember.getCurrTask() != null){
           MyNode currentNode = new MyNode(teamMember.getEmployeeName() + " | Active Task - " + teamMember.getCurrTask(), parent);
           parent.addChild(currentNode);
         }
         else {
-          MyNode currentNode = new MyNode(teamMember.getEmployeeName() + " | Active Task - N/A" , parent);
+          MyNode currentNode = new MyNode(teamMember.getEmployeeName() + " | Active Task - " , parent);
         parent.addChild(currentNode);
         }
         
