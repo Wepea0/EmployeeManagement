@@ -1,3 +1,5 @@
+//Modularized the create team menu
+//Need to find a way to collect the extra information necessary for the teams (and the employees but that's for later)
 
 
 
@@ -1197,7 +1199,7 @@ public class EmployeeInterface extends Employee{
             return Employees;
         }
         catch(Exception e){
-            System.out.println("Data load error - " + e.getMessage());
+            System.out.println("Data load error. Please start a new session.");//+ e.getMessage());
             welcomeMenu();
         }
         return null;
@@ -1217,7 +1219,7 @@ public class EmployeeInterface extends Employee{
             return Teams;
         }
         catch(Exception e){
-            System.out.println("Data load error - " + e.getMessage());
+            System.out.println("Data load error. Please start a new session.");//+ e.getMessage());
             welcomeMenu();
         }
         return null;
@@ -1273,6 +1275,10 @@ public class EmployeeInterface extends Employee{
     /**Helper method to print view info menu and take user input */
     public static void viewInfoMenu(){
         System.out.println("\nWelcome to the View Employee Information menu!");
+        if(Employee.getAllEmployees().size()==0){
+            System.out.println("There have been 0 employees created. Redirecting to main menu...");
+            welcomeMenu();
+        }
         System.out.println("\nThere have been " + Employee.getAllEmployees().size() + " employees created\n");
         int count = 1;
         for(Employee employees: Employee.getAllEmployees()){
