@@ -1,5 +1,3 @@
-//Modularized the create team menu
-//Need to find a way to collect the extra information necessary for the teams (and the employees but that's for later)
 
 
 
