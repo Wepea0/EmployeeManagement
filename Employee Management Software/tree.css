@@ -1,0 +1,22 @@
+.root{
+	border: 1px solid blue;
+	font-family: "Segoe UI", "Courier New", "fantasy";
+	/* background: rgba(0, 128, 0, 0.3) */
+	background-position: right top;
+	background-repeat: no-repeat;
+
+}
+body{
+	background-color: lightblue;
+
+}
+div{
+	padding-left: 4%;
+	
+}
+
+p{
+	padding-left: 4%;
+
+	
+}
